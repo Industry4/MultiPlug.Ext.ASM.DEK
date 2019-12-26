@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>MultiPlug.Ext.ASM.DEK</id>
+    <version>1.0.4</version>
+    <title>ASM DEK</title>
+    <authors>4IR.UK</authors>
+    <owners>4IR.UK</owners>
+    <projectUrl>https://github.com/Industry4/MultiPlug.Ext.ASM.DEK/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Industry4/MultiPlug.Ext.ASM.DEK/master/media/MultiPlug-Ext-ASM-DEK.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MultiPlug Extension for ASM DEK Printing Machines</description>
+    <releaseNotes>Change Log:
+1.0.4 Applied new Base classes
+1.0.2: Refactoring - Just upgrades
+1.0.1: Feature - 1. Attemps to match parameter IDs parameter with names found within the DEK resource file 2. Reads all values (no longer limitation)
+1.0.0: Feature - Reads a DEK product file (Doubles and Strings Only) of a set directory.
+MultiPlug Applications:
+1. DEK Product Files
+* Reads a DEK product file of a set directory.
+* Attemps to match parameter IDs within names found in the DEK resource file.
+* Set the product directory within the settings page. (default E:\product\)
+* Set the resources directory within the settings page. (default C:\Program Files\DEK\Printer\Resources)
+* Enable the application within the settings page. (default enabled)</releaseNotes>
+    <copyright>4IR.UK 2019</copyright>
+    <tags>ASM DEK Printing SMT Stencil Fog_Computing</tags>
+    <dependencies>
+      <dependency id="MultiPlug.Core" version="2.2.56" />
+    </dependencies>
+  </metadata>
+</package>
