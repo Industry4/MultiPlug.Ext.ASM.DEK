@@ -2,7 +2,8 @@
 
 namespace MultiPlug.Ext.ASM.DEK.ViewControllers.Settings.Apps
 {
-    class SettingsHomeController : Controller
+    [Base.Attribute.Route("")]
+    public class SettingsHomeController : SettingsApp
     {
         public Response Get()
         {

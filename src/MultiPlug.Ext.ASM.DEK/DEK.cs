@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 using MultiPlug.Extension.Core;
 using MultiPlug.Extension.Core.Http;
 
@@ -11,20 +10,6 @@ namespace MultiPlug.Ext.ASM.DEK
     {
         public DEK()
         {
-            Core.Instance.AppsUpdated += Instance_AppsUpdated;
-        }
-
-        private void Instance_AppsUpdated(object sender, EventArgs e)
-        {
-            MultiPlugSignals.Updates.HttpEndpoints();
-        }
-
-        public override HttpEndpoint[] HttpEndpoints
-        {
-            get
-            {
-                return Core.Instance.Apps.ToArray();
-            }
         }
 
         public override RazorTemplate[] RazorTemplates

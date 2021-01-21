@@ -5,7 +5,7 @@ using MultiPlug.Base.Http;
 namespace MultiPlug.Ext.ASM.DEK.ViewControllers.Settings.Apps.ProductFiles
 {
     [Route("productfiles")]
-    class ProductFilesSettingsController : Controller
+    public class ProductFilesSettingsController : SettingsApp
     {
         public Response Get()
         {

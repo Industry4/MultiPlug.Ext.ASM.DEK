@@ -15,14 +15,10 @@ namespace MultiPlug.Ext.ASM.DEK
 {
     class Core
     {
-        public event EventHandler AppsUpdated;
-
         private static Core m_Instance = null;
 
         [DataMember]
         public Models.Apps.ProductFiles.Properties ProductFilesApp { get; set; } = new Models.Apps.ProductFiles.Properties();
-
-        private HttpEndpoint m_ProductFilesApp = new ProductFilesApp();
 
         public string DefaultsFilePath { get; private set; } = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ParamDesDefaults.config");
 
@@ -33,12 +29,11 @@ namespace MultiPlug.Ext.ASM.DEK
 
         private Core()
         {
-            Apps.Add(new SettingsApp());
-
-            if( ProductFilesApp.Enabled)
-            {
-                Apps.Add(m_ProductFilesApp);
-            }
+            // TODO.............................. FIX THIS
+            //if( ProductFilesApp.Enabled)
+            //{
+            //    Apps.Add(m_ProductFilesApp);
+            //}
 
             try
             {
@@ -157,20 +152,20 @@ namespace MultiPlug.Ext.ASM.DEK
 
         public void EnableApp(bool isEnabled)
         {
-            if( isEnabled && !ProductFilesApp.Enabled)
-            {
-                Apps.Add(m_ProductFilesApp);
-                AppsUpdated(this, EventArgs.Empty);
-            }
-            else if( !isEnabled && ProductFilesApp.Enabled)
-            {
-                Apps.Remove(m_ProductFilesApp);
-                AppsUpdated(this, EventArgs.Empty);
-            }
+
+            // TODO Fix this..............................................
+            //if( isEnabled && !ProductFilesApp.Enabled)
+            //{
+            //    Apps.Add(m_ProductFilesApp);
+            //    AppsUpdated(this, EventArgs.Empty);
+            //}
+            //else if( !isEnabled && ProductFilesApp.Enabled)
+            //{
+            //    Apps.Remove(m_ProductFilesApp);
+            //    AppsUpdated(this, EventArgs.Empty);
+            //}
 
             ProductFilesApp.Enabled = isEnabled;
         }
-
-        public List<HttpEndpoint> Apps { get; set; } = new List<HttpEndpoint>();
     }
 }

@@ -1,4 +1,4 @@
-﻿@model MultiPlug.Ext.ASM.DEK.Models.Apps.Settings.Home
+﻿@model MultiPlug.Base.Http.EdgeApp
 @{
 
 }
@@ -17,7 +17,7 @@
             <div class="span10">
                 <h4>Applications</h4>
                 <ol>
-                    <li><a href="/extensions/asm-dek/productfiles/">Product Files</a></li>
+                    <li><a href="@Raw(Model.Context.Paths.Home)productfiles/">Product Files</a></li>
                 </ol> 
             </div>
         </div>

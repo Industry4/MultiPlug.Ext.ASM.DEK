@@ -7,7 +7,7 @@ using MultiPlug.Base.Attribute;
 namespace MultiPlug.Ext.ASM.DEK.ViewControllers.Apps.ProductFiles
 {
     [Route("")]
-    class ProductFilesController : Controller
+    public class ProductFilesController : ProductFilesApp
     {
         public Response Get()
         {

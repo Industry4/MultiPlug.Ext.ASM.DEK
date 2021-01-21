@@ -4,14 +4,13 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using MultiPlug.Base.Http;
-using MultiPlug.Ext.ASM.DEK.Properties;
 using MultiPlug.Base.Attribute;
 using MultiPlug.Ext.ASM.DEK.Models.Apps.ProductFiles;
 
 namespace MultiPlug.Ext.ASM.DEK.ViewControllers.Apps.ProductFiles.ProductFile
 {
     [Route("productfile")]
-    class ProductFileController : Controller
+    public class ProductFileController : ProductFilesApp
     {
         public Response Get(int index)
         {

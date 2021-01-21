@@ -1,4 +1,4 @@
-﻿@model MultiPlug.Ext.ASM.DEK.Models.Apps.ProductFiles.ProductFiles
+﻿@model MultiPlug.Base.Http.EdgeApp
 @{ 
     int i = 0;
 }
@@ -26,7 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var File in @Model.Files)
+                    @foreach (var File in @Model.Extension.Model.Files)
                     {
                         <tr>
                             <td><a href="/apps/asm-dek/dek-product-files/productfile/?index=@i">@File</a></td>

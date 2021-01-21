@@ -3,3 +3,5 @@
 ################################################################################
 
 /src/MultiPlug.Ext.ASM.DEK/obj
+/src/MultiPlug.Ext.ASM.DEK/bin
+/src/.vs
